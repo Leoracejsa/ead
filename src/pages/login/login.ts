@@ -8,20 +8,21 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  model: any;
   private credential: Object ={
-    userUniversityId: '',
-    userPassword: ''
+    userUniversityId: "5306203",
+    userPassword: 123456
   };
 
   constructor(
-    model: User;
+    model: User,
 
     public navCtrl: NavController, public navParams: NavParams,
     private toast: ToastController, private userProvider: UsersProvider) {
 
 
       this.model = new User();
-      this.model.matricula = 5306203;
+      this.model.matricula = "5306203";
       this.model.password = 123456;
   }
 

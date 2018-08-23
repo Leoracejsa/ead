@@ -1,14 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
+import {LoginPage} from '../../pages/login/login';
 
 
 
 @Injectable()
 export class UsersProvider {
-  private API_URL = 'https://bb-api-uni.herokuapp.com/'
+  private API_URL = 'https://bb-api-uni.herokuapp.com/';
 
-  private headers: Headers = new Headers({ 'Content-Type': 'application/json' });
+  // private headers: Headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(public http: HttpClient) {}
 
