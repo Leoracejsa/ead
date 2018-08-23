@@ -1,0 +1,30 @@
+page-login {
+    .bg{
+        width: 100%;
+        min-height: 100%;
+        background: url(../assets/imgs/bg1.jpg) no-repeat center;
+        background-size: cover;
+        position: fixed;
+
+    }
+
+    ion-list.form{
+        padding: 200px 10px;
+
+    }
+
+    ion-item.bg-form{
+            padding-left: 16px;
+            padding-right: 0;
+            position: relative;
+            font-size: 1.6rem;
+            font-weight: normal;
+            text-transform: none;
+            color: #000;
+            background-color: #ffffffa8;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);        
+    }
+}

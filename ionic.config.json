@@ -1,0 +1,7 @@
+{
+  "name": "ead",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
