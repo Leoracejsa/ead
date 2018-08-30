@@ -15,12 +15,11 @@ export class LoginPage {
   };
 
   constructor(
-    model: User,
-
-    public navCtrl: NavController, public navParams: NavParams,
-    private toast: ToastController, private userProvider: UsersProvider) {
-
-
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private toast: ToastController, 
+    private userProvider: UsersProvider
+  ) {
       this.model = new User();
       this.model.matricula = "5306203";
       this.model.password = 123456;
@@ -29,10 +28,20 @@ export class LoginPage {
   login(){
     this.userProvider.login(this.model.matricula, this.model.password)
     .then((result: any) => {
-      this.toast.login({ message: 'Usuário Logado com sucesso.'})
+      let toast = this.toast.create({
+        message: 'Usuário Logado com sucesso.',
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present()
     })
     .catch((error: any) =>{
-      this.toast.login({message: 'Erro ao efetuar o login.'})
+      let toast = this.toast.create({
+        message: 'Erro ao efetuar o login.',
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present()
     });
 
   }

@@ -51,7 +51,7 @@ export class UsersProvider {
             resolve(result.json());
           },
         (error) => {
-          reject(error.json());
+          reject(error);
         })
       });
   }
@@ -67,7 +67,7 @@ export class UsersProvider {
           resolve(result.json())
         },
       (error) => {
-        reject(error.json());
+        reject(error);
       })
     });
 }
@@ -82,7 +82,7 @@ get(userUniversityId: string){
         resolve(result.json())
       },
     (error) => {
-      reject(error.json());
+      reject(error);
     })
   });
 }
