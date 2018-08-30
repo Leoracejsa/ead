@@ -10,8 +10,8 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 export class LoginPage {
   model: any;
   private credential: Object ={
-    userUniversityId: "5306203",
-    userPassword: 123456
+    userUniversityId: '5306203',
+    userPassword: '123456'
   };
 
   constructor(
@@ -39,7 +39,7 @@ export class LoginPage {
 }
 
 export class User{
-  matricula: number;
+  matricula: string;
   password: string;
 
 }

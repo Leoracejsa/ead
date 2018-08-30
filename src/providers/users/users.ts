@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import {LoginPage} from '../../pages/login/login';
@@ -39,14 +39,14 @@ export class UsersProvider {
   // }
 
 
-  login(userUniversityId: number, userPassword: string){
+  login(userUniversityId: string, userPassword: string){
       return new Promise((resolve, reject) => {
         var data = {
           userUniversityId: userUniversityId,
           userPassword: userPassword
         };
 
-        this.http.post(this.API_URL, + 'auth', data)
+        this.http.post(this.API_URL + 'auth', data)
           .subscribe((result: any) => {
             resolve(result.json());
           },
@@ -58,7 +58,7 @@ export class UsersProvider {
 
 
 
-  getAll(userUniversityId: number){
+  getAll(userUniversityId: string){
     return new Promise((resolve, reject) => {
       let url = this.API_URL + 'users?' + userUniversityId;
 
@@ -73,7 +73,7 @@ export class UsersProvider {
 }
 
 
-get(userUniversityId: number){
+get(userUniversityId: string){
   return new Promise((resolve, reject) => {
     let url = this.API_URL + 'users'
 
